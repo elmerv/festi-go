@@ -1,0 +1,7 @@
+{
+  "name": "EventBuddy",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
