@@ -6,7 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['tab2.page.scss']
 })
 export class Tab2Page {
-
+  blogs : String[] = [];
+  currentInput;
   constructor() {}
-
+  addBlog(){
+    this.blogs.push(this.currentInput);
+  }
 }

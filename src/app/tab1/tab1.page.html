@@ -1,17 +1,71 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Home
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
-</ion-content>
+<ion-app>
+
+  <ion-toolbar>
+    <ion-title>Searchbar</ion-title>
+  </ion-toolbar>
+
+  <ion-searchbar></ion-searchbar>
+
+
+  <ion-content>
+    <ion-list>
+      <ion-item>Amsterdam</ion-item>
+      <ion-item>Bogota</ion-item>
+      <ion-item>Buenos Aires</ion-item>
+      <ion-item>Cairo</ion-item>
+    </ion-list>
+    <ion-app>
+      <ion-content fullscreen>
+        <ion-card>
+          <img style="object-fit: cover" src="../../assets/superbowl.1.jpeg" />
+          <ion-card-header>
+            <ion-card-subtitle style="text-align: center;">Popular Events</ion-card-subtitle>
+            <ion-card-title style="text-align: center;">Superbowl LIV</ion-card-title>
+          </ion-card-header>
+          <ion-button (click)="onClick()" color="light">
+            <ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
+          </ion-button>
+          <ion-button (click)="onClick()" color="light" style="position: relative; left: 62%">
+            <ion-icon slot="icon-only" name="chevron-forward-outline"></ion-icon>
+          </ion-button>
+        </ion-card>
+        <ion-card>
+          <img style="object-fit: cover" src="../../assets/dodgers.jpeg"/>
+          <ion-card-header>
+            <ion-card-subtitle style="text-align: center;">Sport Events</ion-card-subtitle>
+            <ion-card-title style="text-align: center;">Dodgers vs Marlins</ion-card-title>
+          </ion-card-header>
+          <ion-button (click)="onClick()" color="light">
+            <ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
+          </ion-button>
+          <ion-button (click)="onClick()" color="light" style="position: relative; left: 62%">
+            <ion-icon slot="icon-only" name="chevron-forward-outline"></ion-icon>
+          </ion-button>
+        </ion-card>
+        <ion-card>
+          <img style="object-fit: cover" src="../../assets/concert.1.jpeg"/>
+          <ion-card-header>
+            <ion-card-subtitle style="text-align: center;">Concerts</ion-card-subtitle>
+            <ion-card-title style="text-align: center;">Bad Bunny concert</ion-card-title>
+          </ion-card-header>
+          <ion-button (click)="onClick()" color="light">
+            <ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
+          </ion-button>
+          <ion-button (click)="onClick()" color="light" style="position: relative; left: 62%">
+            <ion-icon slot="icon-only" name="chevron-forward-outline"></ion-icon>
+          </ion-button>
+        </ion-card>
+      </ion-content>
+    </ion-app>
+  </ion-content>
+</ion-app>
+<!-- <app-explore-container name="Tab 1 page"></app-explore-container> -->
