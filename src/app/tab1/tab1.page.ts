@@ -23,9 +23,7 @@ export class Tab1Page {
       img: "../../assets/dodgers.jpeg"
     }
   ]
-  public sportsEvents = [
-    
-  ]
+  public sportsEvents = []
   constructor() {}
   
 
