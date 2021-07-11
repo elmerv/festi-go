@@ -13,6 +13,10 @@ const routes: Routes = [
   {
     path: 'log-in',
     loadChildren: () => import('./log-in/log-in.module').then( m => m.LogInPageModule)
+  },
+  {
+    path: 'splashpage',
+    loadChildren: () => import('./splashpage/splashpage.module').then( m => m.SplashpagePageModule)
   }
 ];
 @NgModule({

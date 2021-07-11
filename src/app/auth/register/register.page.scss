@@ -1,8 +1,18 @@
-#log-inButton{
-    width: 80%; margin: 0;
+#Log-inParagraph{
+    position: relative; 
+    bottom: 100px; 
+    left: 65px
+}
+#signUpButton{
+  width: 80%; margin: 0;
   position: absolute;
-  top: 50%;
+  top: 65%;
   left: 50%;
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+.input {
+    position: relative; 
+    bottom: 80%;
+    font-size: 20px;
 }

@@ -7,24 +7,27 @@
 <ion-content>
   <ion-content [fullscreen]="true">
     <ion-content class="ion-padding">
-      <h1 style="padding-left: 20px; padding: 20px;"
+      <h1
         style="font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif">
-        <b>Welcome,</b></h1>
-      <p style="position: relative; bottom: 10px" class="padding">Log in to continue!</p>
+        <b>Create Account,</b></h1>
+      <p style="position: relative; bottom: 10px">Sign up to get started!</p>
     </ion-content>
-    <ion-item style="position: relative; bottom: 80%">
-      <ion-label position="stacked" style="font-size: 20px;" class="padding">Email/Name</ion-label>
+    <ion-item class="input">
+      <ion-label position="stacked">Email</ion-label>
       <ion-input placeholder=""></ion-input>
     </ion-item>
-    <ion-item style="position: relative; bottom: 80%">
-      <ion-label position="stacked" style="font-size: 20px;" class="padding">Password</ion-label>
+    <ion-item class="input">
+      <ion-label position="stacked">Password</ion-label>
+      <ion-input placeholder="" type="password"></ion-input>
+    </ion-item>
+    <ion-item class="input">
+      <ion-label position="stacked">Confirm Password</ion-label>
       <ion-input placeholder="" type="password"></ion-input>
     </ion-item>
 
   </ion-content>
 </ion-content>
 <section>
-  <ion-button color="secondary" id="log-inButton">Log in</ion-button>
+  <ion-button color="secondary" expand="block" id="signUpButton">Sign up</ion-button>
 </section>
-<ionic-paragraph style="position: relative; bottom: 330px; left:125px">Forgot Password?</ionic-paragraph>
-<ionic-paragraph style="position: relative; bottom: 60px; left: 120px">New User? Sign up</ionic-paragraph>
+<ionic-paragraph id="Log-inParagraph">Already have an account? Log in</ionic-paragraph>

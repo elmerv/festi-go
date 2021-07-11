@@ -23,12 +23,11 @@
       <ion-item>Buenos Aires</ion-item>
       <ion-item>Cairo</ion-item>
     </ion-list>
-    <ion-app>
+    <!-- <ion-app>
       <ion-content fullscreen>
-        <ion-card>
-          <img src="../../assets/superbowl.1.jpeg" />
-          
-          <!-- <ion-card-header>
+        <ion-card style="height: 40%">
+          <img style="object-fit: cover" src="../../assets/superbowl.1.jpeg" />
+          <ion-card-header>
             <ion-card-subtitle style="text-align: center;">Popular Events</ion-card-subtitle>
             <ion-card-title style="text-align: center;">Superbowl LIV</ion-card-title>
           </ion-card-header>
@@ -37,7 +36,7 @@
           </ion-button>
           <ion-button (click)="onClick()" color="dark" size="small" style="position: relative; left: 70%; bottom: 70%">
             <ion-icon slot="icon-only" name="chevron-forward-outline"></ion-icon>
-          </ion-button> -->
+          </ion-button>
         </ion-card>
         <ion-card style="height: 32%">
           <img style="object-fit: cover" src="../../assets/dodgers.jpeg" />
@@ -68,5 +67,61 @@
       </ion-content>
     </ion-app>
   </ion-content>
-</ion-app>
+</ion-app> -->
 <!-- <app-explore-container name="Tab 1 page"></app-explore-container> -->
+<ion-app>
+  <ion-content fullscreen class="ion-padding" scroll-y="false">
+    <ion-slides>
+
+      <ion-slide>
+        <div class="slide">
+          <img [src]="concerts[0].img"/>
+          <h2>Featured Events</h2>
+          <p>Superbowl LIV</p>
+        </div>
+      </ion-slide>
+
+      <!-- <ion-slide>
+        <img src="../../assets/lafcVSgalaxy.jpeg"/>
+        <h2>Featured Events</h2>
+        <p>LAFC vs LA Galaxy</p>
+      </ion-slide>
+
+      <ion-slide>
+        <img src="../../assets/coachella.jpeg"/>
+        <h2>Featured Events</h2>
+        <p>Coachella</p>
+      </ion-slide> -->
+
+    </ion-slides>
+    <!-- <ion-slides>
+
+      <ion-slide>
+        <div class="slide">
+          <img src="../../assets/superbowl.png"/>
+          <h2>Featured Events</h2>
+          <p>Superbowl LIV</p>
+        </div>
+      </ion-slide>
+
+      <ion-slide>
+        <img src="../../assets/lafcVSgalaxy.jpeg"/>
+        <h2>Featured Events</h2>
+        <p>LAFC vs LA Galaxy</p>
+      </ion-slide>
+
+      <ion-slide>
+        <img src="../../assets/coachella.jpeg"/>
+        <h2>Featured Events</h2>
+        <p>Coachella</p>
+      </ion-slide>
+
+      <ion-slide>
+        <img src="./slide-4.png"/>
+        <h2>Ready to Play?</h2>
+        <ion-button fill="clear">Continue <ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button>
+      </ion-slide>
+
+    </ion-slides> -->
+  </ion-content>
+</ion-app>

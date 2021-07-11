@@ -6,7 +6,26 @@ import { Component } from '@angular/core';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
-
+  public concerts = [
+    {
+      name: "concert1",
+      date: "day/month",
+      img: "../../assets/dodgers.jpeg"
+    },
+    {
+      name: "concert1",
+      date: "day/month",
+      img: "../../assets/dodgers.jpeg"
+    },
+    {
+      name: "concert1",
+      date: "day/month",
+      img: "../../assets/dodgers.jpeg"
+    }
+  ]
+  public sportsEvents = [
+    
+  ]
   constructor() {}
   
 
