@@ -31,3 +31,22 @@ ion-slides {
   p b {
     color: var(--ion-text-color, #000000);
   }
+  .headers{
+    text-align: center;
+  }
+  .paragraphs{
+    text-align: center;
+  }
+  #sports.events{
+    position: relative;
+    bottom: 80px
+  }
+  .featuredImage {
+    background-image: url("../../assets/coachella.jpeg");
+    min-height: 200px; 
+    background-position: top;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  

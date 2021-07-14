@@ -6,15 +6,12 @@
   </ion-toolbar>
 </ion-header>
 
-
 <ion-app>
-
   <ion-toolbar>
     <ion-title>Searchbar</ion-title>
   </ion-toolbar>
 
   <ion-searchbar></ion-searchbar>
-
 
   <ion-content>
     <ion-list>
@@ -23,105 +20,44 @@
       <ion-item>Buenos Aires</ion-item>
       <ion-item>Cairo</ion-item>
     </ion-list>
-    <!-- <ion-app>
-      <ion-content fullscreen>
-        <ion-card style="height: 40%">
-          <img style="object-fit: cover" src="../../assets/superbowl.1.jpeg" />
-          <ion-card-header>
-            <ion-card-subtitle style="text-align: center;">Popular Events</ion-card-subtitle>
-            <ion-card-title style="text-align: center;">Superbowl LIV</ion-card-title>
-          </ion-card-header>
-          <ion-button (click)="onClick()" color="dark" size="small" style="position: relative; bottom:70%">
-            <ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
-          </ion-button>
-          <ion-button (click)="onClick()" color="dark" size="small" style="position: relative; left: 70%; bottom: 70%">
-            <ion-icon slot="icon-only" name="chevron-forward-outline"></ion-icon>
-          </ion-button>
-        </ion-card>
-        <ion-card style="height: 32%">
-          <img style="object-fit: cover" src="../../assets/dodgers.jpeg" />
-          <ion-card-header>
-            <ion-card-subtitle style="text-align: center;">Sport Events</ion-card-subtitle>
-            <ion-card-title style="text-align: center;">Dodgers vs Marlins</ion-card-title>
-          </ion-card-header>
-          <ion-button (click)="onClick()" color="dark" size="small" style="position: relative; bottom: 75%">
-            <ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
-          </ion-button>
-          <ion-button (click)="onClick()" color="dark" size="small" style="position: relative; left: 70%; bottom: 75%">
-            <ion-icon slot="icon-only" name="chevron-forward-outline"></ion-icon>
-          </ion-button>
-        </ion-card>
-        <ion-card style="height: 53%">
-          <img style="object-fit: cover" src="../../assets/concert.1.jpeg" />
-          <ion-card-header>
-            <ion-card-subtitle style="text-align: center;">Concerts</ion-card-subtitle>
-            <ion-card-title style="text-align: center;">Bad bunny concert</ion-card-title>
-          </ion-card-header>
-          <ion-button (click)="onClick()" color="dark" size="small" style="position: relative; bottom: 65%">
-            <ion-icon slot="icon-only" name="chevron-back-outline"></ion-icon>
-          </ion-button>
-          <ion-button (click)="onClick()" color="dark" size="small" style="position: relative; left: 70%; bottom: 65%">
-            <ion-icon slot="icon-only" name="chevron-forward-outline"></ion-icon>
-          </ion-button>
-        </ion-card>
+
+    <ion-app>
+      <ion-content fullscreen class="ion-padding">
+
+        <div class="featuredImage" style="display: table; height: 40%; width: 100%;">
+          <h2 style="color: white; position:relative; bottom: -140px; ">Coachella</h2>
+          <p style="color: white; position: relative; bottom: -135px; left: -35px; font-size: small;text-align: left;">
+            The Coachella Valley Music and Arts
+            Festival is an annual music and arts festival...</p>
+        </div>
+        <ion-slides [options] ="slideOpts">
+
+          <ion-slide *ngFor="let event of featuredEvents">
+            <img src={{event.img}} />
+            <h2 class="headers">{{event.name}}</h2>
+            <p class="paragraphs">{{event.date}}</p>
+          </ion-slide>
+        </ion-slides>
+        <ion-slides [options] ="slideOpts">
+          <ion-slide *ngFor="let event of sportsEvents" >
+            <img src={{event.img}} />
+            <h2 class="headers">{{event.name}}</h2>
+            <p class="paragraphs">{{event.date}}</p>
+          </ion-slide>
+        </ion-slides>
+
+        
+        <!-- <div style="height:1000px;font-size:36px;">
+          <h2>Popular events</h2>
+          <ion-card *ngFor="let pizza of featuredEvents" style="width: 120px; height: 130px;;">
+
+            <img src={{pizza.img}} stye="size: contain" />
+            <p class="paragraphs">{{pizza.date}}</p>
+            <p class="headers">{{pizza.name}}</p>
+          </ion-card>
+
+
+        </div> -->
+
       </ion-content>
     </ion-app>
-  </ion-content>
-</ion-app> -->
-<!-- <app-explore-container name="Tab 1 page"></app-explore-container> -->
-<ion-app>
-  <ion-content fullscreen class="ion-padding" scroll-y="false">
-    <ion-slides>
-
-      <ion-slide>
-        <div class="slide">
-          <img [src]="concerts[0].img"/>
-          <h2>Featured Events</h2>
-          <p>Superbowl LIV</p>
-        </div>
-      </ion-slide>
-
-      <!-- <ion-slide>
-        <img src="../../assets/lafcVSgalaxy.jpeg"/>
-        <h2>Featured Events</h2>
-        <p>LAFC vs LA Galaxy</p>
-      </ion-slide>
-
-      <ion-slide>
-        <img src="../../assets/coachella.jpeg"/>
-        <h2>Featured Events</h2>
-        <p>Coachella</p>
-      </ion-slide> -->
-
-    </ion-slides>
-    <!-- <ion-slides>
-
-      <ion-slide>
-        <div class="slide">
-          <img src="../../assets/superbowl.png"/>
-          <h2>Featured Events</h2>
-          <p>Superbowl LIV</p>
-        </div>
-      </ion-slide>
-
-      <ion-slide>
-        <img src="../../assets/lafcVSgalaxy.jpeg"/>
-        <h2>Featured Events</h2>
-        <p>LAFC vs LA Galaxy</p>
-      </ion-slide>
-
-      <ion-slide>
-        <img src="../../assets/coachella.jpeg"/>
-        <h2>Featured Events</h2>
-        <p>Coachella</p>
-      </ion-slide>
-
-      <ion-slide>
-        <img src="./slide-4.png"/>
-        <h2>Ready to Play?</h2>
-        <ion-button fill="clear">Continue <ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button>
-      </ion-slide>
-
-    </ion-slides> -->
-  </ion-content>
-</ion-app>
