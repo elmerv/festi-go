@@ -1,4 +1,4 @@
-<ion-header [translucent]="true">
+<!-- <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
       Page 2
@@ -10,9 +10,6 @@
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title size="x-large" >Direct Messages</ion-title>
-   <!-- <ion-buttons slot="start">
-        <ion-back-button defaultHref="home"></ion-back-button>
-      </ion-buttons>  -->
     </ion-toolbar>
   </ion-header>
 
@@ -31,4 +28,25 @@
       </ion-label>
     </ion-item>
   </ion-list>
-</ion-content>
+</ion-content> -->
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-title>Messages</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <ion-list>
+    <ion-list-header>
+      Recent Conversations
+    </ion-list-header>
+
+    <ion-item *ngFor = "let friend of messages">
+      <ion-avatar slot="start">
+        <img src={{friend.img}}>
+      </ion-avatar>
+      <ion-label>
+        <h2>{{friend.name}}</h2>
+        <p>{{friend.recentConversation}}</p>
+      </ion-label>
+    </ion-item>

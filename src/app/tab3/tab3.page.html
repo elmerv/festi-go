@@ -1,35 +1,24 @@
-<ion-header [translucent]="true">
+<ion-header translucent>
   <ion-toolbar>
-    <ion-title>
-      Page 2
-    </ion-title>
+    <ion-title>Profile</ion-title>
   </ion-toolbar>
-</ion-header>
+</ion-header>,
+<ion-content fullscreen >
+  
+    <img src="../../assets/pfp1.jpeg" id="pfp1" />
+    <ion-card-header *ngFor = "let info of stuartLittle">
+      <section>
+        <ion-button id="button1" expand="full" color="secondary">Edit</ion-button>
+      </section>
+      <section><p></p></section>
+      <ion-card-title class="text-align-center">{{info.name}}</ion-card-title>      
+      <ion-card-subtitle class="text-align-center">{{info.tag}}</ion-card-subtitle>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Journal</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <ion-item>
-    <ion-label position="stacked">Make post </ion-label>
-    <ion-textarea [(ngModel)]="currentInput" placeholder="Type something"></ion-textarea>
-  </ion-item>
-
-  <ion-button expand="full" color="secondary" (click)="addBlog()">Add Post</ion-button>
-  <ion-list>
-    <ion-list-header>
-      Recent Posts
-    </ion-list-header>
-
-
-    <ion-item *ngFor="let cheese of blogs">
-      <ion-label>
-        <p>{{cheese}}</p>
-      </ion-label>
-    </ion-item>
-  </ion-list>
+    </ion-card-header>
+    <ion-card-content>
+      Bio: Hello everyone! My name is Stuart and I'm a sophomore at UCLA. I like to play various sports,
+      but my favorite has to be baseball. My favorite team is the Dodgers (obviously). Some of my other 
+      hobbies include cycling, drawing, and listening to music. 
+    </ion-card-content>
 
 </ion-content>

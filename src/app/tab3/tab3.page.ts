@@ -1,12 +1,17 @@
 import { Component } from '@angular/core';
-import arr from './friends';
 @Component({
   selector: 'app-tab3',
   templateUrl: 'tab3.page.html',
   styleUrls: ['tab3.page.scss']
 })
 export class Tab3Page {
-  friendsArr: any[] = arr;
+  public stuartLittle = [
+    {
+      name: "Stuart Little",
+      tag: "Dodgers Fan/ Student at UCLA",
+      img: "../../assets/pfp1.jpeg",
+    }
+]
   constructor() {}
 
 }

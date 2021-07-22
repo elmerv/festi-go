@@ -19,8 +19,12 @@ const routes: Routes = [
     loadChildren: () => import('./splashpage/splashpage.module').then( m => m.SplashpagePageModule)
   },
   {
-    path: 'event-info',
+    path: 'event-info/:id',
     loadChildren: () => import('./event-info/event-info.module').then( m => m.EventInfoPageModule)
+  },
+  {
+    path: 'event1',
+    loadChildren: () => import('./event1/event1.module').then( m => m.Event1PageModule)
   }
 ];
 @NgModule({

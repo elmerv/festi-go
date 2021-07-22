@@ -31,12 +31,12 @@
             Festival is an annual music and arts festival...</p>
         </div> 
         <h2>Popular Events</h2>
-        <ion-slides [options] ="slideOpts" class="ion-slides">
-          <ion-slide *ngFor="let event of featuredEvents">
-            <a href="http://localhost:8100/event-info">
-              <img src={{event.img}} class="swiper-slide"/>
-            </a>
-            <p class="paragraphs">{{event.date}}</p>
+        <ion-slides *ngIf = "data != undefined" [options] ="slideOpts" class="ion-slides" >
+          <ion-slide *ngFor="let event of data._embedded.events" routerLink="/event-info/{{event.id}}">
+            <!-- <a href="http://localhost:8100/event-info"> -->
+              <img src={{event.images[0].url}} class="swiper-slide"/>
+            <!-- </a> -->
+            <p class="paragraphs">{{event.dates.start.localDate}}</p>
             <h5 class="headers">{{event.name}}</h5>
           </ion-slide>
         </ion-slides>
