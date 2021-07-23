@@ -23,8 +23,16 @@ const routes: Routes = [
     loadChildren: () => import('./event-info/event-info.module').then( m => m.EventInfoPageModule)
   },
   {
-    path: 'event1',
-    loadChildren: () => import('./event1/event1.module').then( m => m.Event1PageModule)
+    path: 'find-a-group',
+    loadChildren: () => import('./find-a-group/find-a-group.module').then( m => m.FindAGroupPageModule)
+  },
+  {
+    path: 'find-a-buddy',
+    loadChildren: () => import('./find-a-buddy/find-a-buddy.module').then( m => m.FindABuddyPageModule)
+  },
+  {
+    path: 'test-page',
+    loadChildren: () => import('./test-page/test-page.module').then( m => m.TestPagePageModule)
   }
 ];
 @NgModule({

@@ -33,11 +33,11 @@
         <h2>Popular Events</h2>
         <ion-slides *ngIf = "data != undefined" [options] ="slideOpts" class="ion-slides" >
           <ion-slide *ngFor="let event of data._embedded.events" routerLink="/event-info/{{event.id}}">
-            <!-- <a href="http://localhost:8100/event-info"> -->
-              <img src={{event.images[0].url}} class="swiper-slide"/>
-            <!-- </a> -->
-            <p class="paragraphs">{{event.dates.start.localDate}}</p>
-            <h5 class="headers">{{event.name}}</h5>
+            
+              <img src={{event.images[9].url}} class="swiper-slide"/>
+
+            <!-- <p class="paragraphs">{{event.dates.start.localDate}}</p>
+            <h5 class="headers">{{event.name}}</h5> -->
           </ion-slide>
         </ion-slides>
         <h2>Sports events</h2>
