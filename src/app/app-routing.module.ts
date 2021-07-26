@@ -31,9 +31,9 @@ const routes: Routes = [
     loadChildren: () => import('./find-a-buddy/find-a-buddy.module').then( m => m.FindABuddyPageModule)
   },
   {
-    path: 'test-page',
-    loadChildren: () => import('./test-page/test-page.module').then( m => m.TestPagePageModule)
-  }
+    path: 'conversation',
+    loadChildren: () => import('./conversation/conversation.module').then( m => m.ConversationPageModule)
+  },
 ];
 @NgModule({
   imports: [
