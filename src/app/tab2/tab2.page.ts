@@ -8,28 +8,28 @@ import { Component } from '@angular/core';
 export class Tab3Page {
   public messages = [
     {
-      name: "Stuart Little",
+      name: "Samantha Rivera",
       recentConversation: "Wanna go to a Dodgers game together?",
       img: "../../assets/dodgers.jpeg"
     }, 
     {
       name: "John Doe",
-      recentConversation: "sheeeesh",
+      recentConversation: "I had a blast!",
       img: "../../assets/concert.1.jpeg"
     },
     {
-      name: "Bob the Great",
+      name: "Bob Johnson",
       recentConversation: "That was fun!",
       img: "../../assets/ocFair.jpeg"
     },
     {
-      name: "King George the second",
-      recentConversation: "I am the best",
+      name: "George Thompson",
+      recentConversation: "Wanna go to another event some other time?",
       img: "../../assets/jazz.event.jpeg"
     },
     {
-      name: "Hamster",
-      recentConversation: "I like hamsters",
+      name: "Kimberly Martinez",
+      recentConversation: "The festival was way more fun than I expected",
       img: "../../assets/uscGame.jpeg"
     }
   ]  

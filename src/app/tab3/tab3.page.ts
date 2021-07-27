@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 export class Tab3Page {
   public stuartLittle = [
     {
-      name: "Stuart Little",
+      name: "Alex Castro",
       tag: "Dodgers Fan/ Student at UCLA",
       img: "../../assets/pfp1.jpeg",
     }

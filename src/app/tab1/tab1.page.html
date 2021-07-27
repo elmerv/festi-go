@@ -21,7 +21,7 @@
       <ion-item>Cairo</ion-item>
     </ion-list>
 
-    <ion-app>
+    <ion-app *ngIf = "data != undefined">
       <ion-content fullscreen class="ion-padding">
 
         <!-- <div class="featuredImage" style="display: table; height: 40%; width: 100%;">
@@ -30,47 +30,32 @@
             The Coachella Valley Music and Arts
             Festival is an annual music and arts festival...</p>
         </div>  -->
-        <h2>Popular Events</h2>
-        <ion-slides *ngIf = "data != undefined" [options] ="slideOpts" class="ion-slides" >
+        <h2>Sports Events</h2>
+        <ion-slides  [options] ="slideOpts" class="ion-slides" >
           <ion-slide *ngFor="let event of data._embedded.events" routerLink="/event-info/{{event.id}}">
             
               <img src={{event.images[9].url}} class="swiper-slide"/>
 
-            <!-- <p class="paragraphs">{{event.dates.start.localDate}}</p>
-            <h5 class="headers">{{event.name}}</h5> -->
+            
           </ion-slide>
         </ion-slides>
-        <h2>Sports events</h2>
-        <ion-slides [options] ="slideOpts" class="ion-slides">
-          <ion-slide *ngFor="let event of sportsEvents" style="display: block;">
-            <img src={{event.img}} class="swiper-slide" />
-            <p class="paragraphs">{{event.date}}</p>
-            <h5 class="headers">{{event.name}}</h5>
+        
+        <h2>Festivals</h2>
+        <ion-slides  [options] ="slideOpts" class="ion-slides">
+          <ion-slide *ngFor="let event of festival._embedded.events" routerLink = "/event-info/{{event.id}}">
+
+            <img src={{event.images[0].url}} class="swiper-slide" />
           </ion-slide>
         </ion-slides>
 
-     <h2>Concerts</h2>
-      <ion-slides [options] ="slideOpts" class="ion-slides">
-        <ion-slide *ngFor="let event of concerts" >
-          <img src={{event.img}} class="swiper-slide"/>
-          <p class="paragraphs">{{event.date}}</p>
-          <h5 class="headers">{{event.name}}</h5>
-        </ion-slide>
-      </ion-slides>
+        <h2>Concerts</h2>
+        <ion-slides  [options] ="slideOpts" class="ion-slides">
+          <ion-slide *ngFor="let event of concert._embedded.events" routerLink = "/event-info/{{event.id}}">
+
+            <img src={{event.images[0].url}} class="swiper-slide" />
+          </ion-slide>
+        </ion-slides>
+
+
       </ion-content>
     </ion-app>
-    <!-- <ion-header translucent>
-      <ion-toolbar>
-        <ion-title>Home page</ion-title>
-      </ion-toolbar>
-    </ion-header>
-    <ion-content fullscreen>
-      <h2>Popular Events</h2>
-        <ion-slides [options] ="slideOpts" class="ion-slides">
-          <ion-slide *ngFor="let event of featuredEvents">
-              <img src={{event.img}} class="swiper-slide" onclick="navigateForward()"/>
-            <p class="paragraphs">{{event.date}}</p>
-            <h5 class="headers">{{event.name}}</h5>
-          </ion-slide>
-          </ion-slides>
-    </ion-content> -->
