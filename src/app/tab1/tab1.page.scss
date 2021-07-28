@@ -1,9 +1,11 @@
 
   .swiper-slide img {
-    max-height: 50%;
-    max-width: 80%;
-    margin: 60px 0 40px;
-    pointer-events: none;
+    float: left;
+    width:  250px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 5%;
+    margin: 10px 0 20px
   }
 
   // b {
@@ -21,16 +23,14 @@
   //   color: var(--ion-text-color, #000000);
   // }
 
-  // #sports.events{
-  //   position: relative;
-  //   bottom: 80px
+  // .featuredImage {
+  //   background-image: url("../../assets/coachella.jpeg");
+  //   min-height: 200px; 
+  //   background-position: top;
+  //   background-attachment: fixed;
+  //   background-repeat: no-repeat;
+  //   background-size: contain;
   // }
-  .featuredImage {
-    background-image: url("../../assets/coachella.jpeg");
-    min-height: 200px; 
-    background-position: top;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
- 
+#yes {
+  color: var(--ion--toolbar-background, linear-gradient(#92FE9D, #00C9FF))
+}

@@ -1,61 +1,56 @@
-<ion-header [translucent]="true">
+<ion-header >
   <ion-toolbar>
     <ion-title>
       Home
     </ion-title>
   </ion-toolbar>
+  <ion-toolbar id="yes">
+    <ion-searchbar></ion-searchbar>
+  </ion-toolbar>
 </ion-header>
 
-<ion-app>
-  <ion-toolbar>
-    <ion-title></ion-title>
-  </ion-toolbar>
 
-  <ion-searchbar></ion-searchbar>
+<ion-content fullscreen class="ion-padding">
 
-  <ion-content>
-    <ion-list>
-      <ion-item>Amsterdam</ion-item>
-      <ion-item>Bogota</ion-item>
-      <ion-item>Buenos Aires</ion-item>
-      <ion-item>Cairo</ion-item>
-    </ion-list>
-
-    <ion-app *ngIf = "data != undefined">
-      <ion-content fullscreen class="ion-padding">
-
-        <!-- <div class="featuredImage" style="display: table; height: 40%; width: 100%;">
+  <!-- <div class="featuredImage" style="display: table; height: 40%; width: 100%;">
           <h2 style="color: white; position:relative; bottom: -140px; ">Coachella</h2>
           <p style="color: white; position: relative; bottom: -135px; left: -35px; font-size: small;text-align: left;">
             The Coachella Valley Music and Arts
             Festival is an annual music and arts festival...</p>
         </div>  -->
-        <h2>Sports Events</h2>
-        <ion-slides  [options] ="slideOpts" class="ion-slides" >
-          <ion-slide *ngFor="let event of data._embedded.events" routerLink="/event-info/{{event.id}}">
-            
-              <img src={{event.images[9].url}} class="swiper-slide"/>
+  <h2>Sports Events</h2>
+  <ion-slides *ngIf="data != undefined" [options]="slideOpts">
+    <ion-slide *ngFor="let event of data._embedded.events" class="ion-slides" routerLink="/event-info/{{event.id}}">
 
-            
-          </ion-slide>
-        </ion-slides>
-        
-        <h2>Festivals</h2>
-        <ion-slides  [options] ="slideOpts" class="ion-slides">
-          <ion-slide *ngFor="let event of festival._embedded.events" routerLink = "/event-info/{{event.id}}">
-
-            <img src={{event.images[0].url}} class="swiper-slide" />
-          </ion-slide>
-        </ion-slides>
-
-        <h2>Concerts</h2>
-        <ion-slides  [options] ="slideOpts" class="ion-slides">
-          <ion-slide *ngFor="let event of concert._embedded.events" routerLink = "/event-info/{{event.id}}">
-
-            <img src={{event.images[0].url}} class="swiper-slide" />
-          </ion-slide>
-        </ion-slides>
+      <img src={{event.images[9].url}} class="swiper-slide" />
 
 
-      </ion-content>
-    </ion-app>
+    </ion-slide>
+  </ion-slides>
+
+  <h2>Festivals</h2>
+  <ion-slides *ngIf="festival != undefined" [options]="slideOpts">
+    <ion-slide *ngFor="let event of festival._embedded.events" class="ion-slides" routerLink="/event-info/{{event.id}}">
+
+      <img src={{event.images[3].url}} class="swiper-slide" />
+    </ion-slide>
+  </ion-slides>
+
+  <h2>Concerts</h2>
+  <ion-slides *ngIf="concert != undefined" [options]="slideOpts">
+    <ion-slide *ngFor="let event of concert._embedded.events" class="ion-slides" routerLink="/event-info/{{event.id}}">
+
+      <img  src={{event.images[0].url}} class="swiper-slide" />
+    </ion-slide>
+  </ion-slides>
+
+  <h2>Stand-up Comedy</h2>
+  <ion-slides *ngIf="comedy != undefined" [options]="slideOpts">
+    <ion-slide *ngFor="let event of comedy._embedded.events" class="ion-slides" routerLink="/event-info/{{event.id}}">
+
+      <img  src={{event.images[0].url}} class="swiper-slide" />
+    </ion-slide>
+  </ion-slides>
+
+
+</ion-content>

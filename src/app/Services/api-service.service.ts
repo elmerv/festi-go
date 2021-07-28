@@ -25,4 +25,10 @@ export class ApiServiceService {
   retrieveConcertData(id){
     return this.http.get(`https://app.ticketmaster.com/discovery/v2/events?${id}.apikey=18J2Va6keAAywBA969BAaMH5AQSfE8s2&keyword=Concerts&locale=*`)
   }
+  getComedyData(){
+    return this.http.get("https://app.ticketmaster.com/discovery/v2/events?apikey=18J2Va6keAAywBA969BAaMH5AQSfE8s2&keyword=comedy&locale=*")
+  }
+  retrieveComedyData(id){
+    return this.http.get(`https://app.ticketmaster.com/discovery/v2/events?${id}.apikey=18J2Va6keAAywBA969BAaMH5AQSfE8s2&keyword=comedy&locale=*`)
+  }
 }

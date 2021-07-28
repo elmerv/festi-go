@@ -10,6 +10,7 @@ export class Tab1Page implements OnInit{
   data;
   festival;
   concert;
+  comedy;
 
 slideOpts = {
   slidesPerView: 1.3
@@ -19,13 +20,11 @@ slideOpts = {
   getEvents() {
     this.service.getEventData().subscribe((res) => {
       this.data = res;
-      console.log(this.data)
     });
   }
   getFestival(){
     this.service.getFestivalData().subscribe((res) => {
       this.festival = res;
-      console.log(this.festival)
     });
   }
   getConcerts(){
@@ -33,10 +32,16 @@ slideOpts = {
       this.concert = res;
     });
   }
+  getComedy(){
+    this.service.getComedyData().subscribe((res) => {
+      this.comedy = res;
+    })
+  }
   ngOnInit(){
     this.getEvents();
     this.getFestival();
     this.getConcerts();
+    this.getComedy();
   }
 
 }
