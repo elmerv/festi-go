@@ -35,6 +35,7 @@ slideOpts = {
   getComedy(){
     this.service.getComedyData().subscribe((res) => {
       this.comedy = res;
+      console.log(this.comedy)
     })
   }
   ngOnInit(){

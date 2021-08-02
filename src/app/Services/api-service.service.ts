@@ -11,24 +11,15 @@ export class ApiServiceService {
     return this.http.get("https://app.ticketmaster.com/discovery/v2/events?apikey=18J2Va6keAAywBA969BAaMH5AQSfE8s2&keyword=sports%20games&locale=*")
   }
   retrieveEventInfo(id){
-    return this.http.get(`https://app.ticketmaster.com/discovery/v2/events?${id}.apikey=18J2Va6keAAywBA969BAaMH5AQSfE8s2&keyword=sports%20games&locale=*`)
+    return this.http.get(`https://app.ticketmaster.com/discovery/v2/events/${id}.json?apikey=18J2Va6keAAywBA969BAaMH5AQSfE8s2`)
   }
   getFestivalData(){
     return this.http.get("https://app.ticketmaster.com/discovery/v2/events?apikey=18J2Va6keAAywBA969BAaMH5AQSfE8s2&keyword=Festivals&locale=*&preferredCountry=us")
   }
-  retrieveFestivaltData(id){
-    return this.http.get(`https://app.ticketmaster.com/discovery/v2/events?${id}.apikey=18J2Va6keAAywBA969BAaMH5AQSfE8s2&keyword=Festivals&locale=*&preferredCountry=us`)
-  }
   getConcertData(){
     return this.http.get("https://app.ticketmaster.com/discovery/v2/events?apikey=18J2Va6keAAywBA969BAaMH5AQSfE8s2&keyword=Concerts&locale=*")
   }
-  retrieveConcertData(id){
-    return this.http.get(`https://app.ticketmaster.com/discovery/v2/events?${id}.apikey=18J2Va6keAAywBA969BAaMH5AQSfE8s2&keyword=Concerts&locale=*`)
-  }
   getComedyData(){
     return this.http.get("https://app.ticketmaster.com/discovery/v2/events?apikey=18J2Va6keAAywBA969BAaMH5AQSfE8s2&keyword=comedy&locale=*")
-  }
-  retrieveComedyData(id){
-    return this.http.get(`https://app.ticketmaster.com/discovery/v2/events?${id}.apikey=18J2Va6keAAywBA969BAaMH5AQSfE8s2&keyword=comedy&locale=*`)
   }
 }
