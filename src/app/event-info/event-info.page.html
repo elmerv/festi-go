@@ -6,20 +6,27 @@
     <ion-title> Event Info</ion-title>
   </ion-toolbar>
 </ion-header>
-<ion-content fullscreen *ngIf = "data != undefined">
+<ion-content fullscreen *ngIf="data != undefined">
   <ion-card>
-    <img id="picture"src={{data.images[0].url}}/>
-    <h2 class="details"><ion-icon name="location-outline"></ion-icon>{{data._embedded.venues[0].name}}<br>
-    <ion-icon name="calendar-outline"></ion-icon>{{data.dates.start.localDate}}
-    </h2>
-    <h1></h1>
-    <ion-card-header>
-      <section>
-        <ion-button id="button1" expand="full" color="secondary" routerLink = "/find-a-group/">Find a group</ion-button>
-        <ion-button expand="block" id="button2"  color="secondary" routerLink = "/find-a-buddy/">Find a buddy</ion-button>
-       
-      </section>
+    <img id="picture" src={{data.images[0].url}} />
+   <ion-card-header class="details"> 
+    <h3>
+      <ion-icon name="location-outline"></ion-icon>{{data._embedded.venues[0].name}}<br>
+        <ion-icon name="calendar-outline"></ion-icon>{{data.dates.start.localDate}}
       
+      <ion-button color="secondary" id="group" routerLink="/find-a-group/">
+        <ion-icon slot="icon-only" name="people"></ion-icon>
+      </ion-button>
+    </h3>
+      <section id="ex">
+
+        <ion-button expand="block" color="secondary" routerLink="/find-a-buddy/">
+          <ion-icon name="person-add" id="icon"></ion-icon>
+          Find a buddy
+        </ion-button>
+
+      </section>
+
       <ion-card-subtitle>{{data.dates.start.localDate}}</ion-card-subtitle>
       <ion-card-title>{{data.name}}</ion-card-title>
     </ion-card-header>
@@ -27,6 +34,6 @@
       Category: {{data.classifications[0].segment.name}}
       <!-- Details: {{data.info}}  For some reason this code only works on some events, and not all of them-->
 
-</ion-card-content>
+    </ion-card-content>
   </ion-card>
 </ion-content>
