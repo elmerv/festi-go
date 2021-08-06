@@ -1,12 +1,40 @@
+
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
     </ion-buttons>
-    <ion-title>Find a group</ion-title>
+    <ion-title>Find a group </ion-title>  
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content fullscreen>
+  <!-- <ion-icon name="options-outline" class="pfpIcon"></ion-icon> -->
+    <img id="picture" src="../../assets/concert.4.jpeg" />
+    <h2 id="header1"> 2/3 - Private group<br id="break">
+      <ion-icon name="person-circle-outline" class="pfpIcon"></ion-icon> Hosted by John Doe</h2>
+    <h4 id="header2">Price: Free <br id="break2">
+    Age: 18+
+    </h4>
+      <ion-card-header> 
+      <ion-card-title>Group Members</ion-card-title> 
+    </ion-card-header>
+  
+    <ion-slides [options]="slideOpts">
+      <ion-slide class="ion-slides">
+  
+        <img src="../../assets/concert.3.jpeg" class="swiper-slide" /> 
+        <img src="../../assets/coachella.jpeg" class="swiper-slide" />
+        <img src="../../assets/concert.1.jpeg" class="swiper-slide" />
+  
+  
+      </ion-slide>
+    </ion-slides>
+    <ion-footer translucent>
+      <ion-toolbar>
+        <ion-button expand="block" id="button" color="secondary" (click) = "presentAlert()" >Join</ion-button>
+      </ion-toolbar>
+    </ion-footer>
+
 
 </ion-content>

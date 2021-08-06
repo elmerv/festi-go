@@ -1,0 +1,44 @@
+#picture {
+    width:  380px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 3%;  
+}
+#header1 {
+    margin: 10px 20px;
+    font-size: 22px
+}
+
+#pfpIcon{
+  height: 30px;
+  width: 30px;
+  margin: -5px
+}
+#header2 {
+    margin: 30px 48px 20px;
+}
+#break {
+    display: block; /* makes it have a width */
+    content: ""; /* clears default height */
+    margin-top: 12px; /* change this to whatever height you want it */
+}
+#break2 {
+    display: block; /* makes it have a width */
+    content: ""; /* clears default height */
+    margin-top: 25px; /* change this to whatever height you want it */
+}
+.swiper-slide img {
+    float: left;
+    width:  100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 10px 0 20px
+}
+#button {
+    height: 50px;
+    width: 80%;
+    display:block;
+    margin:auto;
+
+}
