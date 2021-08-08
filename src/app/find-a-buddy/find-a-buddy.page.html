@@ -1,15 +1,14 @@
-
 <ion-header>
   <ion-toolbar>
     <ion-title>Find a buddy</ion-title>
     <ion-buttons slot="start">
-      <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+      <ion-back-button text="" icon="arrow-back"></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-item *ngFor = "let name of people">
+  <ion-item *ngFor="let name of people">
     <ion-avatar slot="start">
       <img src={{name.pfp}}>
     </ion-avatar>
@@ -17,7 +16,8 @@
       <h2><b>{{name.name}}</b></h2>
       <h3>{{name.title}}</h3>
       <h3>{{name.location}}</h3>
-      <ion-button shape="round" class="messageButton"  routerLink = "/conversation/">Message</ion-button>
+      <ion-button shape="round" fill="outline" class="messageButton" color="secondary" routerLink="/conversation/">
+        Message</ion-button>
     </ion-label>
   </ion-item>
 

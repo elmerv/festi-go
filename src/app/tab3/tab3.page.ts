@@ -9,7 +9,7 @@ export class Tab3Page {
     {
       name: "Alex Castro",
       tag: "Dodgers Fan/ Student at UCLA",
-      img: "../../assets/pfp1.jpeg",
+      img: "../../assets/pfp4.jpg",
     }
 ]
   constructor() {}
