@@ -3,77 +3,42 @@
     <ion-buttons slot="start">
       <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
     </ion-buttons>
-    <ion-title>John Doe</ion-title>
+    <ion-title id="title">Bob</ion-title>
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <div class="container">
-    <div class="message-blue">
-      <p class="message-content">Hi Alex! My name is John</p>
 
-    </div>
+  <div class="messageBubbleGreen">
+    <h6 class="messageSpacing"><b>Hi Alex! My name is Bob</b></h6>
+  </div>
 
-    <div class="message-orange">
-      <p class="message-content">Hi John, nice to meet you!</p>
+  <div class="messageBubbleBlue">
+    <h6 class="messageSpacing"><b>Hi Bob! How was your day?</b></h6>
+  </div>
 
-    </div>
+  <div class="messageBubbleGreen">
+    <h6 class="messageSpacing"><b>It's been good</b></h6>
+  </div>
+  <div class="messageBubbleGreen">
+    <h6 class="messageSpacing"><b>How about yours?</b></h6>
+  </div>
 
-    <div class="message-blue">
-      <p class="message-content">Do you have tickets for the music festival today?</p>
+  <div class="messageBubbleBlue">
+    <h6 class="messageSpacing"><b>Mine's also been good</b></h6>
+  </div>
 
-    </div>
-
-    <div class="message-orange">
-      <p class="message-content">What a coincidence, I actually do</p>
-
-    </div>
-
-    <div class="message-blue">
-      <p class="message-content">Would you like to go together?</p>
-
-    </div>
-
-    <div class="message-orange">
-      <p class="message-content">Sure!</p>
-
-    </div>
-
-    <div class="message-orange">
-      <p class="message-content">Where do you want to meet?</p>
-
-    </div>
-
-    <div class="message-blue">
-      <p class="message-content">How about at the starbucks near the venue?</p>
-
-    </div>
-
-    <div class="message-orange">
-      <p class="message-content">Sure sounds good</p>
-
-    </div>
-
-    <div class="message-blue">
-      <p class="message-content">alright</p>
-
-    </div>
-
-    <div class="message-blue">
-      <p class="message-content">See you there!</p>
-
-    </div>
-
+  <div class="messageBubbleGreen">
+    <h6 class="messageSpacing"><b>I wanted to ask if you wanted to go to the football game on Saturday</b></h6>
+  </div>
+  <div class="messageBubbleBlue">
+    <h6 class="messageSpacing"><b>Yea, I would like to go!</b></h6>
   </div>
 
 
-  <ion-card>
-    
-    <ion-input placeholder="send a message"></ion-input>
-    <ion-button id="send-button">
-      <ion-icon slot="icon-only" name="send"></ion-icon>
-    </ion-button>
+  <div id="messageSlot">
+    <ion-input placeholder="enter message"></ion-input>
+    <ion-icon name="send" id="sendIcon"></ion-icon>
+  </div>
 
-</ion-card>
 
- 
 </ion-content>

@@ -11,19 +11,19 @@ export class FindABuddyPage implements OnInit {
       name: "Bob",
       title: "UCLA Sophomore",
       location: "Los Angeles, CA",
-      pfp: "../../assets/pfp1.jpeg",
+      pfp: "../../assets/pfp2.jpeg",
     },
     {
-      name: "Stuart Little",
+      name: "Alexander",
       title: "USC Student",
       location: "Glendale, CA",
-      pfp: "../../assets/pfp1.jpeg",
+      pfp: "../../assets/pfp4.jpg",
     },
     {
-      name: "John Dough",
+      name: "Jessica",
       title: "Baseball enthusiast",
       location: "Los Angeles, CA",
-      pfp: "../../assets/pfp1.jpeg",
+      pfp: "../../assets/pfp3.jpg",
     }
   ]
   constructor() { }
