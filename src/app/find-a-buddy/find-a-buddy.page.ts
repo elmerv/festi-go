@@ -20,7 +20,7 @@ export class FindABuddyPage implements OnInit {
       pfp: "../../assets/pfp4.jpg",
     },
     {
-      name: "Jessica",
+      name: "Samantha",
       title: "Baseball enthusiast",
       location: "Los Angeles, CA",
       pfp: "../../assets/pfp3.jpg",

@@ -8,7 +8,7 @@
 </ion-header>
 <ion-content>
 
-  <div class="messageBubbleGreen">
+  <!-- <div class="messageBubbleGreen">
     <h6 class="messageSpacing"><b>Hi Alex! My name is Bob</b></h6>
   </div>
 
@@ -29,16 +29,23 @@
 
   <div class="messageBubbleGreen">
     <h6 class="messageSpacing"><b>I wanted to ask if you wanted to go to the football game on Saturday</b></h6>
-  </div>
-  <div class="messageBubbleBlue">
-    <h6 class="messageSpacing"><b>Yea, I would like to go!</b></h6>
+  </div> -->
+  <div class="messageBubbleBlue" *ngFor="let send of blogs">
+    <h6 class="messageSpacing"><b>{{send}}</b></h6>
   </div>
 
 
-  <div id="messageSlot">
-    <ion-input placeholder="enter message"></ion-input>
-    <ion-icon name="send" id="sendIcon"></ion-icon>
-  </div>
+  <ion-item id="messageSlot" color="light">
+
+    <!-- <ion-button expand="full" color="secondary" (click)="addBlog()">Add Blog</ion-button>
+    <ion-icon name="send" id="sendIcon"></ion-icon> -->
+
+    <ion-input [(ngModel)]="currentInput" placeholder="enter message"></ion-input>
+    <ion-button (click)="addBlog()" color="light">
+      <ion-icon slot="icon-only" name="send" id="sendIcon"></ion-icon>
+    </ion-button>
+
+  </ion-item>
 
 
 </ion-content>

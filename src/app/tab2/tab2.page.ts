@@ -10,27 +10,27 @@ export class Tab3Page {
     {
       name: "Samantha Rivera",
       recentConversation: "Wanna go to a Dodgers game together?",
-      img: "../../assets/dodgers.jpeg"
+      img: "../../assets/pfp3.jpg"
     }, 
     {
       name: "John Doe",
       recentConversation: "I had a blast!",
-      img: "../../assets/concert.1.jpeg"
+      img: "../../assets/pfp5.png"
     },
     {
       name: "Bob Johnson",
       recentConversation: "That was fun!",
-      img: "../../assets/ocFair.jpeg"
+      img: "../../assets/pfp2.jpeg"
     },
     {
       name: "George Thompson",
       recentConversation: "Wanna go to another event some other time?",
-      img: "../../assets/jazz.event.jpeg"
+      img: "../../assets/pfp4.jpg"
     },
     {
       name: "Kimberly Martinez",
       recentConversation: "The festival was way more fun than I expected",
-      img: "../../assets/uscGame.jpeg"
+      img: "../../assets/pfp7.jpeg"
     }
   ]  
   constructor() {}
