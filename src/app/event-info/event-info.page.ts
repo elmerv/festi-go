@@ -10,19 +10,21 @@ import { ApiServiceService } from '../Services/api-service.service';
 })
 export class EventInfoPage implements OnInit {
   data;
-
+  image; 
   constructor(private route: ActivatedRoute, private service: ApiServiceService) { }
-  showData() {
-    console.log(this.data._embedded.events);
-    console.log("ALejandro");
-  }
 
   getEvents() {
     const id = this.route.snapshot.paramMap.get('id');
     console.log(id);
     this.service.retrieveEventInfo(id).subscribe(data => {
       this.data = data;
-      console.log(this.data);
+      for(let i: number = 0; i < this.data.images.length;i++){
+        if(this.data.images[i].ratio == "3_2"){
+          this.image = this.data.images[i].url;
+          console.log(this.image);
+    
+        }
+      }
     });
   }
 
