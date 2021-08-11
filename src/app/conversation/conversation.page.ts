@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router'
 
 @Component({
   selector: 'app-conversation',
@@ -7,13 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConversationPage implements OnInit {
   blogs : String[] = [];
-  currentInput
-  constructor() { }
+  currentInput;
+  personName = ""; 
+  constructor(private route: ActivatedRoute) { }
   addBlog(){
     this.blogs.push(this.currentInput);
     console.log(this.currentInput)
   }
+  getName(){
+    const id = this.route.snapshot.paramMap.get('person');
+    this.personName = id;
+
+
+  }
   ngOnInit() {
+    this.getName();
   }
 
 }

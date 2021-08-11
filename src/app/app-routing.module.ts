@@ -31,7 +31,7 @@ const routes: Routes = [
     loadChildren: () => import('./find-a-buddy/find-a-buddy.module').then( m => m.FindABuddyPageModule)
   },
   {
-    path: 'conversation',
+    path: 'conversation/:person',
     loadChildren: () => import('./conversation/conversation.module').then( m => m.ConversationPageModule)
   },
   {

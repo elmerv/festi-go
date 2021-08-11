@@ -19,8 +19,7 @@
   <ion-slides *ngIf="data != undefined" [options]="slideOpts">
     <ion-slide *ngFor="let event of data._embedded.events" class="ion-slides" routerLink="/event-info/{{event.id}}">
 
-      <img src={{event.images[9].url}} class="swiper-slide" />
-
+        <img [src]='event.images[6].url' class="swiper-slide" />
 
     </ion-slide>
   </ion-slides>

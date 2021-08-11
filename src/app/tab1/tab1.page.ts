@@ -11,7 +11,10 @@ export class Tab1Page implements OnInit{
   festival;
   concert;
   comedy;
-
+  ratio: string = "16_9";
+  url = "";
+  isFirst = 0; 
+  one = 1;
 slideOpts = {
   slidesPerView: 1.3
 }
@@ -20,6 +23,7 @@ slideOpts = {
   getEvents() {
     this.service.getEventData().subscribe((res) => {
       this.data = res;
+      console.log(this.data);
     });
   }
   getFestival(){
